@@ -1,7 +1,10 @@
 package matheus_nicolau.credit.exceptions;
 
 public enum ExceptionMessages {
-    CREDIT_NOT_FOUND("Credito não encontrado");
+    CREDIT_ALREADY_EXISTS("Credito já cadastrado"),
+    PAYLOAD_NOT_FOUND("Payload não pode ser nulo"),
+    BAD_SOLICITATION("Erro ao receber solicitação");
+    
 
     private final String message;
 
@@ -9,7 +12,7 @@ public enum ExceptionMessages {
         this.message = message;
     }
 
-    public String getMessage() {
+    public String message() {
         return message;
     }
 }
